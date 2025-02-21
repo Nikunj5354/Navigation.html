@@ -3,111 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation bar</title>
+    <title>Navigation Bar</title>
     <style>
         body {
             margin: 0;
             font-family: sans-serif;
-            background-color: #1a237e;
-            color: white;
+            background-color: #add8e6; 
         }
-        header {
+        .navbar {
             display: flex;
             align-items: center;
-            padding: 15px 20px;
+            background-color: #2c3e50; 
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            margin: 20px;
         }
         .logo {
-            flex: 1;
-            display: flex;
-            align-items: center;
-        }
-        .logo img {
-            max-height: 80px;
-            max-width: 150px;
-        }
-        .search-bar {
-            flex: 2;
-            text-align: center;
-        }
-        .search-bar input {
-            width: 70%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #3f51b5;
-            color: white;
-        }
-        .search-bar input::placeholder {
-            color: #ccc;
-        }
-        .user-profile {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-        }
-        .profile-info {
-            display: flex;
-            align-items: center;
+            width: 50px; 
             margin-right: 20px;
         }
-        .profile-picture {
-            width: 101px; /*Adjusted to match the image size more accurately*/
-            height: 96px;
-            border-radius: 50%;
-            background-color: #5c6bc0;
-            margin-left: 10px; /* moved to left */
-            overflow:hidden;
+        .search-bar {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0; 
+            border-radius: 20px;
+            padding: 5px 10px;
+            margin-right: 20px;
         }
-        .profile-picture img {
-            width:108%;
-            height:113%;
+        .search-bar input[type="text"] {
+            border: none;
+            background-color: transparent;
+            flex: 1;
+            padding: 5px;
+            font-size: 14px;
+            outline: none;
+        }
+        .search-bar input::placeholder {
+            color: #888;
+        }
+        .search-bar button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        .search-bar img {
+            width: 20px; 
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+        .profile-image {
+            width: 40px; 
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+        .profile-image img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
         .profile-details {
             display: flex;
             flex-direction: column;
-            text-align: left; /* Align text to the right */
+            margin-right: 20px;
         }
-        .profile-name {
+        .profile-details span:first-child {
             font-weight: bold;
-        }
-        .welcome-message {
             font-size: 14px;
+        }
+        .profile-details span:last-child {
+            font-size: 12px;
         }
         .icons {
             display: flex;
             align-items: center;
         }
         .icons img {
-            width: 29px;
-            height: 29px;
+            width: 20px; 
             margin-left: 10px;
-            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="transperent.png" alt="Logo">
-        </div>
+    <div class="navbar">
+        <img src="transperent.png" alt="Logo" class="logo">
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
+            <input type="text" placeholder="Hinted search text">
+            <button><img src="searchsymbol.png" alt="Search"></button>
         </div>
-        <div class="user-profile">
-            <div class="profile-info">
-                <div class="profile-picture"><img src="mephoto.jpg" alt="Profile Picture"></div>
+        <div class="profile">
+            <div class="profile-image">
+                <img src="me2.jpg" alt="Profile Picture">
             </div>
-                <div class="profile-details">
-                    <div class="profile-name">MISTRY NIKUNJ</div>
-                    <div class="welcome-message">WELCOME TO GOKUL TECH VENTURES!</div>
-                </div>
-            <div class="icons">
-                <img src="bell-1096280_640.webp" alt="Notifications">
-                <img src="settinglogo.avif" alt="Settings">
+            <div class="profile-details">
+                <span>Welcome Back!</span>
+                <span>Mistry Nikunj</span>
             </div>
         </div>
-    </header>
+        <div class="icons">
+            <img src="noti.webp" alt="Notifications">
+            <img src="setting.png" alt="Settings">
+        </div>
+    </div>
 </body>
 </html>
